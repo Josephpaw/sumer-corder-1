@@ -1,89 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet", href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joseph Shaw | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
+<div id="side-menu">
+    <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
 <body>
-    <div id="header"> 
-        <div class = "container">
-            <nav>
-                <img src="images/download.png" class="logo">
-                <ul>
-                    <li><a href="Home">Home</a></li>
-                    <li><a href="Home">About</a></li>
-                    <li><a href="Home">services</a></li>
-                    <li><a href="Home">portfolio</a></li>
-                    <li><a href="Home">contact</a></li>
-                </ul>
-            </nav>
-            <div class="header">
-                <p>UI/UX Designer</p>
-                <h1>Hi, I'm <span>Joseph</span><br>Shaw From california </h1>
-            </div>
-        </div>
-    </div>
-     <!-----------about-------- --> 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/images.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hi my name is Joseph Juan Shaw, I was born on 04/05/2011 and im going to be talking a little bit about my self. 
-                    I like playing air softing with my freinds, 
-                    I like playing basketball & Football, and I like surrons.
-                    I will be talking more about my self later on. </p>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="Skills">
-                    <ul>
-                       <li><span>Python</span><br>Beginner</li>
-                       <li><span>HTML</span><br>Intern</li>
-                       <li><span>Game Dev</span><br>intermediate</li> 
-                    </ul>
-                </div>
-                <div class="tab-contents"id="Experience">
-                    <ul>
-                       <li><span>UI/UX</span><br>Designing Web/app interfaces</li>
-                       <li><span>Web Development</span><br>Web app Development</li>
-                       <li><span>App Development</span><br>Building Android/iOS apps</li> 
-                    </ul>
-                </div>
-                <div class="tab-contents"id="Education">
-                    <ul>
-                       <li><span>2025</span><br>The Hidden Genius Project</li>
-                       <li><span></span><br>Web app Development</li>
-                       <li><span></span><br>Building Android/iOS apps</li> 
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-    
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+  <!-- Optional: Background Music -->
+  <audio autoplay loop hidden>
+    <source src="music/background.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-        function opentab(tabname){
-             for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-             }
-             for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            
+  <!-- Hero Section -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <img src="images/download.png" alt="Joseph Shaw Logo" class="logo" />
+        <ul>
+
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>UI/UX Designer & Developer</p>
+        <h1>Hello, I'm <span>Joseph Shaw</span><br>from California</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="About" class="reveal">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/1000000521.jpg" alt="Portrait of Joseph Shaw" />
+        </div>
+        <div class="about-col-2">
+          <h2 class="sub-title">About Me</h2>
+          <p>
+            Hey! I'm Joseph Juan Shaw, born April 5, 2011. I'm passionate about design,
+            gaming, fast rides like Surrons and cars. I also love playing airsoft, football,
+            and basketball with my friends.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+            <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+            <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Python</span> – Beginner but learning quickly!</li>
+              <li><span>HTML/CSS</span> – Intermediate</li>
+              <li><span>Game Development</span> – Intermediate</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>UI/UX</span> – Designing intuitive interfaces</li>
+              <li><span>Web Dev</span> – Building websites like this one!</li>
+              <li><span>Mobile Dev</span> – Exploring Android/iOS development</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2025</span> – The Hidden Genius Project</li>
+              <li><span>Middle College High</span> – Algebra, Geometry, and soon Algebra 2</li>
+              <li><span>Past</span> – St. Joseph Elementary & Middle School</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="reveal">
+    <div class="container">
+      <h2 class="sub-title">My Services</h2>
+      <div class="services-list">
+        <div class="service-box">
+          <i class="fas fa-code fa-2x"></i>
+          <h3>Web Design</h3>
+          <p>I built this site from scratch using HTML and CSS. I'm always learning new tricks and improving.</p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div class="service-box">
+          <i class="fas fa-pencil-ruler fa-2x"></i>
+          <h3>UI/UX Design</h3>
+          <p>I create clean, user-friendly layouts that look great on any screen.</p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div class="service-box">
+          <i class="fab fa-app-store fa-2x"></i>
+          <h3>Game & App Ideas</h3>
+          <p>Creative projects like a species recognition app and a fully original game.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="reveal">
+    <div class="container">
+      <h2 class="sub-title">Things I like</h2>
+      <div class="work-list">
+
+        <div class="work">
+          <img src="images/cosplay.png" alt="Anime con" />
+          <div class="layer">
+            <h3>Anime con</h3>
+            <p>I like dressing up as anime and fantasy characters and going to cons!</p>
+            <a href="#"><i class="fa-solid fa-trophy"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/360_F_9392210_QnapDCqBJWNRMp7QljDQ5Ek8EtdvTtjj.jpg" alt="Basketball Team Win" />
+          <img src="istockphoto-164466830-612x612.jpg" />
+          <div class="layer">
+            <h3>Sports</h3>
+            <p>I like playing basketball and football and also play airsoft with my friends.</p>
+            <a href="#"><i class="fa-solid fa-medal"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/building.jpg" alt="Building Projects with Dad" />
+          <div class="layer">
+            <h3>Things I've Built</h3>
+            <p>I'v Helped my dad build furniture like a couch and a electric scooter.</p>
+            <a href="#"><i class="fa-solid fa-puzzle-piece"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!----------contact-------->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left" data-aos="fade-right">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> Contact email</p>
+          <p><i class="fa-solid fa-phone"></i> number</p>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href="input git" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="contact-right" data-aos="fade-left">
+          <form action="#">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Message" cols="30" rows="10"></textarea>
+            <button class="btn btn2">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- JavaScript -->
+  <script>
+    function opentab(event, tabName) {
+      const tabLinks = document.querySelectorAll(".tab-links");
+      const tabContents = document.querySelectorAll(".tab-contents");
+
+      tabLinks.forEach(link => link.classList.remove("active-link"));
+      tabContents.forEach(content => content.classList.remove("active-tab"));
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabName).classList.add("active-tab");
+    }
+
+    const reveals = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.1 });
 
-    </script>
-</body> 
+    reveals.forEach(section => revealObserver.observe(section));
+  </script>
+
+</body>
 </html>
